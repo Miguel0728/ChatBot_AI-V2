@@ -5,6 +5,12 @@
 .env.development
 .env.production
 
+# Base de datos
+*.db
+*.sqlite
+*.sqlite3
+backup_*.db
+
 # Virtual environment
 .venv/
 venv/
