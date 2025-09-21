@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 ChatBot AI - Interfaz Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤖 ChatBot AI</h1>
+            <p>Tu asistente inteligente relajado y divertido</p>
+            <button id="clearBtn" class="clear-btn">🗑️ Limpiar Chat</button>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <span class="message-sender">🤖 AI</span>
+                        <span class="message-text">¡Hola! Soy tu asistente AI. ¿En qué puedo ayudarte hoy?</span>
+                        <span class="message-time"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-group">
+                    <input type="text" id="messageInput" placeholder="Escribe tu mensaje aquí..." autocomplete="off">
+                    <button id="sendBtn" class="send-btn">
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+                <div id="loadingIndicator" class="loading-indicator">
+                    <span>🤖 Pensando...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
